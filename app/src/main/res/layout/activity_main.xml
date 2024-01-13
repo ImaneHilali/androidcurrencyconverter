@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convertisseur de devises"
+        android:textSize="24sp"
+        android:textColor="@color/button_color"
+        android:textStyle="bold"
+        android:layout_marginBottom="60dp"/>
+
+    <LinearLayout
+        android:layout_width="202dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Montant : "
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/amountInput"
+            android:layout_width="197dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_weight="1"
+            android:hint="0.00 $"
+            android:inputType="numberDecimal" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="41dp"
+            android:layout_height="wrap_content"
+            android:text="De : "
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/fromCurrencySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/currency_array" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vers : "
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/toCurrencySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/currency_array" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Résultat :                          "
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="24dp"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Convertir" />
+
+
+
+
+</LinearLayout>
+
+
